@@ -1,0 +1,82 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+\title{
+\vspace{1cm}
+{\includegraphics[width=0.15\textwidth]{/storage/emulated/0/Screenshot_2024_1018_113636.jpg} \\ AVR-GCC Assignment} }
+\author{Shaik Mohisena Tabassum \\ Roll No: FWC22279 \\ shaikmohisena123@gmail.com}
+ \begin{document}
+\maketitle
+ \section {ABSTRACT}
+ A $4-bit$ priority encoder has inputs $D_3, D_2, D_1$ and $D_0$ in descending order of priority. The two-bit output $AB$ is generated as $00, 01, 10$ and $11$ corresponding to inputs $D_3, D_2, D_1$ and $D_0$, respectively. The Boolean expression of the output bit $B$ isto be implemented.
+\section{COMPONENTS}
+The required components list is given in Table: I. 
+ \begin{table} [htbp]
+\centering
+\begin{tabular}{| c | c | c |} \hline
+	\textbf{Components} & \textbf{Value} & \textbf{Quantity} \\\hline
+LEDs &  & 1 \\ \hline
+Arduino & UNO & 1 \\ \hline
+Jumper Wires &  & 10 \\ \hline
+Breadboard & & 1 \\ 
+\hline
+\end{tabular}
+\vspace{0.1cm}
+\caption{\label{tab:widgets}}
+\end{table}
+\section{PROCEDURE}
+\begin {enumerate}
+\item The truth table of the $4-bit$ priority encoder is shown in Table: II.
+\begin{table}[htbp]                                       
+\centering                                                          
+\begin{tabular}{| c | c | c | c | c | c |} \hline                                
+$D_3$ & $D_2$ & $D_1$ & $D_0$ & $A$ & $B$ \\ \hline 
+	1 & X & X & X & 0 & 0 \\ \hline                                   
+	0 &  1 & X & X & 0 & 1 \\ \hline                                               
+	0 & 0 & 1 & X & 1 & 0 \\ \hline                                           
+	0 & 0 & 0 & 1  & 1 & 1  \\ \hline                                        
+\end{tabular}                                                       
+\vspace{0.1cm}                                                      
+\caption{\label{tab:widgets}}                                       
+\end{table}
+
+\item Make the connections between Arduino and LED as per the Table: III.
+ \begin{table}[htbp]                                       
+\centering                                                          
+\begin{tabular}{| c | c |} \hline                                
+	\textbf{Arduino Pin} & \textbf{LED}  \\\hline 
+D7 & + terminal  \\ \hline                                       
+gnd  & - terminal \\                                               
+\hline                                                              
+\end{tabular}                                                       
+\vspace{0.1cm}                                                      
+\caption{\label{tab:widgets}}                                       
+\end{table}
+
+\item Take the inputs for $4-bit$ encoder using the Arduino digital pins $2, 3, 4$ and $5$ as $D_0, D_1, D_2$ and $D_3$ respectively.
+
+
+\item Run the Embedded C code and observe the LED glow for the required inputs.
+
+	\end {enumerate}
+\section{RESULTS}
+Download the code given in the link below and execute them to see the output as shown in Fig.1 by observing the LED. 
+ \\ https://github.com/Tabassum4930/FWC-1/blob/main/AVR-GCC/code.c
+
+\begin {figure} [h] 
+	\centering 
+	\includegraphics[width=0.35\textwidth]{/storage/emulated/0/internship/IMG_20241022_113151.jpg}
+	\caption{\label{fig:Gates}}    
+\end {figure}
+\section{CONCLUSION}
+Encoders play a critical role in a wide range of applications, offering precise and reliable data about position, speed, and direction. Therefore, we can design several circuits and can be implemented with Arduino using C language
+
+\end{document}
